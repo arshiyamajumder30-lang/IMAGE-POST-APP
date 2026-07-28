@@ -52,3 +52,35 @@ html, body, #root {
   cursor: pointer;
  
 }
+
+.feed-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 20px;
+  height: 100%;
+  width: 100%;
+  background-color: lightgoldenrodyellow;
+  padding: 20px;
+}
+
+.post-card{
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px black;
+  width: 400px;
+  margin-bottom: 20px;
+}
+
+.post-card p{
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.post-card img{
+max-width: 100%;
+border-radius: 8px;
+margin-top: 10px;
+}
