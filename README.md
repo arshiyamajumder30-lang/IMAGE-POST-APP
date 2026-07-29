@@ -1,21 +1,21 @@
 # 📸 MERN Image Post App
 
-A simple full-stack MERN application where users can upload an image with a caption and view all uploaded posts.
+A full-stack MERN application that allows users to upload images with captions and view all uploaded posts. Images are stored using **ImageKit**, while post information is stored in **MongoDB**.
 
 ---
 
 ## 🚀 Features
 
-- Upload an image
-- Add a caption
-- Store images in Cloudinary
-- Store post details in MongoDB
-- Display all uploaded posts
-- Responsive UI built with React
+- Upload images
+- Add captions to posts
+- Store images using ImageKit
+- Save post data in MongoDB
+- View all uploaded posts
+- Responsive user interface
 
 ---
 
-## 🛠 Tech Stack
+## 🛠️ Tech Stack
 
 ### Frontend
 - React.js
@@ -29,7 +29,7 @@ A simple full-stack MERN application where users can upload an image with a capt
 - MongoDB
 - Mongoose
 - Multer
-- Cloudinary
+- ImageKit
 
 ---
 
@@ -40,15 +40,16 @@ image-post-app/
 │
 ├── frontend/
 │   ├── src/
-│   ├── components/
 │   ├── pages/
+│   ├── components/
 │   └── App.jsx
 │
 ├── backend/
 │   ├── controllers/
-│   ├── models/
 │   ├── routes/
+│   ├── models/
 │   ├── middleware/
+│   ├── utils/
 │   └── server.js
 │
 └── README.md
@@ -58,19 +59,19 @@ image-post-app/
 
 ## 📄 Pages
 
-### 📝 Create Post
+### Create Post
 
-- Upload an image
+- Select an image
 - Enter a caption
 - Submit the form
-- Image is uploaded to Cloudinary
-- Post information is saved in MongoDB
+- Image is uploaded to ImageKit
+- Post details are saved in MongoDB
 
-### 🖼 Feed
+### Feed
 
 - Displays all uploaded posts
-- Shows image and caption
-- Fetches data from the backend using Axios
+- Shows the uploaded image and its caption
+- Retrieves data from the backend using Axios
 
 ---
 
@@ -104,12 +105,12 @@ npm run dev
 
 Create a `.env` file inside the backend folder.
 
-```
+```env
 MONGO_URI=your_mongodb_connection_string
 
-CLOUDINARY_CLOUD_NAME=your_cloud_name
-CLOUDINARY_API_KEY=your_api_key
-CLOUDINARY_API_SECRET=your_api_secret
+IMAGEKIT_PUBLIC_KEY=your_public_key
+IMAGEKIT_PRIVATE_KEY=your_private_key
+IMAGEKIT_URL_ENDPOINT=your_url_endpoint
 
 PORT=3000
 ```
@@ -118,13 +119,13 @@ PORT=3000
 
 ## 📡 API Endpoints
 
-### Create a Post
+### Create Post
 
 ```
 POST /api/posts
 ```
 
-Uploads an image and caption.
+Uploads an image to ImageKit and stores the post in MongoDB.
 
 ### Get All Posts
 
@@ -138,181 +139,14 @@ Returns all uploaded posts.
 
 ## 📸 Screenshots
 
-### Create Post Page
-
-- Upload an image
-- Add caption
-- Submit post
-
-### Feed Page
-
-- Displays uploaded images
-- Shows captions for each post
-
----
-
-## 🔮 Future Improvements
-
-- User Authentication
-- Like and Comment functionality
-- Delete/Edit posts
-- Search posts
-- Pagination
-- Dark Mode
-
----
-
-## 👩‍💻 Author
-# 📸 MERN Image Post App
-
-A simple full-stack MERN application where users can upload an image with a caption and view all uploaded posts.
-
----
-
-## 🚀 Features
-
+### Create Post
 - Upload an image
 - Add a caption
-- Store images in Cloudinary
-- Store post details in MongoDB
-- Display all uploaded posts
-- Responsive UI built with React
+- Submit the post
 
----
-
-## 🛠 Tech Stack
-
-### Frontend
-- React.js
-- Axios
-- React Router DOM
-- CSS
-
-### Backend
-- Node.js
-- Express.js
-- MongoDB
-- Mongoose
-- Multer
-- Cloudinary
-
----
-
-## 📂 Project Structure
-
-```
-image-post-app/
-│
-├── frontend/
-│   ├── src/
-│   ├── components/
-│   ├── pages/
-│   └── App.jsx
-│
-├── backend/
-│   ├── controllers/
-│   ├── models/
-│   ├── routes/
-│   ├── middleware/
-│   └── server.js
-│
-└── README.md
-```
-
----
-
-## 📄 Pages
-
-### 📝 Create Post
-
-- Upload an image
-- Enter a caption
-- Submit the form
-- Image is uploaded to Cloudinary
-- Post information is saved in MongoDB
-
-### 🖼 Feed
-
+### Feed
 - Displays all uploaded posts
-- Shows image and caption
-- Fetches data from the backend using Axios
-
----
-
-## ⚙️ Installation
-
-### Clone the repository
-
-```bash
-git clone <repository-url>
-```
-
-### Backend
-
-```bash
-cd backend
-npm install
-npm start
-```
-
-### Frontend
-
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
----
-
-## 🔑 Environment Variables
-
-Create a `.env` file inside the backend folder.
-
-```
-MONGO_URI=your_mongodb_connection_string
-
-CLOUDINARY_CLOUD_NAME=your_cloud_name
-CLOUDINARY_API_KEY=your_api_key
-CLOUDINARY_API_SECRET=your_api_secret
-
-PORT=3000
-```
-
----
-
-## 📡 API Endpoints
-
-### Create a Post
-
-```
-POST /api/posts
-```
-
-Uploads an image and caption.
-
-### Get All Posts
-
-```
-GET /api/posts
-```
-
-Returns all uploaded posts.
-
----
-
-## 📸 Screenshots
-
-### Create Post Page
-
-- Upload an image
-- Add caption
-- Submit post
-
-### Feed Page
-
-- Displays uploaded images
-- Shows captions for each post
+- Shows images and captions
 
 ---
 
@@ -320,10 +154,10 @@ Returns all uploaded posts.
 
 - User Authentication
 - Like and Comment functionality
-- Delete/Edit posts
+- Edit/Delete posts
 - Search posts
 - Pagination
-- Dark Mode
+- Responsive enhancements
 
 ---
 
@@ -331,8 +165,4 @@ Returns all uploaded posts.
 
 **Arshiya Majumder**
 
-Built using the MERN Stack as a full-stack learning project.
-
-**Arshiya Majumder**
-
-Built using the MERN Stack as a full-stack learning project.
+Built as a full-stack MERN project using React, Node.js, Express.js, MongoDB, and ImageKit for image storage.
